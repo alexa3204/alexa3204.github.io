@@ -1,11 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
 
 :root{
-	--main-background: #0b0c0f;
-	--main-fonts-color: #fff;
-	--main-decor-color:#00a9e2;
-    --main-header-background:#21252e;
-	--main-font-family: 'Poppins', sans-serif;
+	--main-background: #fff;
+	--sub-background-color: #c1c5af;
+	--main-fonts-color: #000;
+	--main-decor-color:#758B72;
+    --main-header-background:#fff;
+	--main-font-family: 'Roboto Mono', monospace, sans-serif;
 }
 
 *{
@@ -47,17 +48,38 @@ header:hover{
 	background: var(--main-header-background);
 }
 
-.logo img{
+.logo {
+	display: flex;
+	align-items: left;
+	justify-content: left;
+}
+.logo img {
+	display: block;
+	flex-basis: 5%;
+	width: 10%;
+	height: 10%;
+	padding-top: 20px;
+}
+.logo h1{
+	font-family: var(--main-font-family);
 	padding-top: 5px;
+	padding-left: 20px;
 	height: 50px;
 	cursor: pointer;
+	color: #000;
+}
+
+.logo h1 a:visited, a:link, a:active, a:hover {
+	color: #ffffff;
+	text-decoration: none;
 }
 
 .nav-bar{
-	list-style:none;
+	list-style: none;
 	position: relative;
 	display: inline-flex;
 }
+
 
 a.nav-link{
 	margin: 2px;
@@ -78,6 +100,7 @@ a.nav-link{
     background: var(--main-decor-color);
 }
 
+
 /*──────────────────
        home
 ──────────────────*/
@@ -93,9 +116,6 @@ a.nav-link{
 }
 
 #home .filter{
-	background: url('https://images.unsplash.com/photo-1544099858-75feeb57f01b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80') no-repeat;
-	background-size: cover;
-	background-position:center;
     position: absolute;
     top: 0px;
     bottom: 0;
@@ -114,19 +134,22 @@ a.nav-link{
 
 .intro  p{
     margin: 5px;
+	padding: 0% 20%;
 	font-size:1.2rem;
 	font-family: var(--main-font-family);
-	text-align:center;
+	text-align: left;
 }
 
  h3{
 	padding-bottom: 15px;
     letter-spacing: normal;
     font-family: var(--main-font-family);
-	font-style: normal;
-	font-size: 60px;
+	font-style: Normal;
+	font-size: 50px;
 	color: var(--main-fonts-color);
 	text-shadow: 0px 0px 40px var(--main-decor-color);
+	text-align: left;
+	padding: 0% 20%;
 }
 
 
@@ -136,6 +159,7 @@ a.nav-link{
 
 .social-media{
 	padding: 10px;
+	padding-top: 20px;
 	display: flex;
 	position: center;
     align-items: space-around;
@@ -160,11 +184,68 @@ a.nav-link{
 }
 
 /*──────────────────
+      about-me
+──────────────────*/
+
+#about-me {
+	border: none;
+	padding: 0% 10%; 	
+	padding-top: 100px;
+	height: auto;
+	color: var(--main-fonts-color);
+	background-color: var(--sub-background-color) ;
+}
+
+#about-me h3 {
+    letter-spacing: normal;
+    font-family: var(--main-font-family);
+	font-style: Normal;
+	font-size: 50px;
+	color: var(--main-fonts-color);
+	text-shadow: 0px 0px 40px var(--main-decor-color);
+	text-align: center;
+	padding: 0% 20% 3% 20%;
+}
+
+.about {
+	padding: 0% 15% 50px 15%;
+	height: auto;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-around;
+	flex-wrap: wrap;
+}
+
+
+.about_text {
+    /* margin: 5px;*/
+	padding-left: 15px;
+	font-size:1rem;
+	font-family: var(--main-font-family);
+	font-weight: 400;
+	text-align: justify;
+	flex: 1;
+	order: 2;
+}
+
+.personal-photo {
+	object-fit: contain;
+	align-self: flex-start;
+	border-radius: 20px;
+	max-width: 28%;
+	padding: 0;
+	width: 400px;
+	order: 1;
+	flex: 1;
+}
+
+/*──────────────────
       projects
 ──────────────────*/
 
 #projects{
-	margin-top:100px;
+	/* margin-top:100px; */
     height: 100%;
 	display: flex;
 	flex-direction: column;
@@ -174,7 +255,7 @@ a.nav-link{
 	color: var(--main-fonts-color);
 }
 #projects h3{
-    padding-top: 70px;
+    padding-top: 100px;
 }
 #projects p{
 	font-family: var(--main-font-family);
@@ -199,6 +280,7 @@ a.nav-link{
 	height:250px;
 	border-radius:12px;
     background:var(--main-decor-color);
+	margin-bottom: 80px;
 }
 
 .card img{
@@ -229,6 +311,99 @@ a.nav-link{
 }
 
 /*──────────────────
+      Experience
+──────────────────*/
+#experience {
+	border: none;
+	padding: 0% 10%; 	
+	/* margin-top: 100px; */
+	height: 100%;
+	color: var(--main-fonts-color);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center ;
+	flex-wrap: nowrap;
+	background-color: var(--sub-background-color) ;
+}
+
+#experience h3 {
+	padding-top: 100px;
+	padding-bottom: 50px;
+}
+
+.accordion {
+	max-width: 800px;
+	box-shadow: 5px 2px 5px var(--main-decor-color);
+	width: 600px;
+	border-radius: 5px;
+	overflow: hidden;
+	font-family: var(--main-font-family);
+	background-color: #fff;
+	margin-bottom: 80px;
+}
+
+.accordion__label,
+.accordion__content {
+	padding: 14px 20px;
+}
+
+.accordion__label{
+	display: block;
+	color: #000;
+	font-weight: 500;
+	cursor: pointer;
+	position: relative;
+	transition: background 0.1s;
+}
+
+.accordion__label:hover {
+	background: rgba(0, 100, 0, 0.1);
+}
+
+.accordion__label::after {
+	content: "";
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	right: 20px; /*make sure this value is the same as accordion__label padding left/right value*/
+	width: 24px;
+	height: 12px;
+	/* background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='24px' viewBox='0 0 24 24' width='24px' fill='%23000000'%3E%3Cpath d='M0 0h24v24H0V0z' fill='none'/%3E%3Cpath d='M19 13H5v-2h14v2z'/%3E%3C/svg%3E"); */
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='24px' viewBox='0 0 24 24' width='24px' fill='%23000000'%3E%3Cpath d='M0 0h24v24H0V0z' fill='none'/%3E%3Cpath d='M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z'/%3E%3C/svg%3E");
+	background-size: contain;
+	transition: transform 0.4s;
+	background-repeat: no-repeat;
+}
+
+.accordion__content {
+	background: var(--main-decor-color);
+	line-height: 1.6;
+	font-size: 0.85em;
+	display: none;
+}
+
+.job-title {
+	font-weight: bold;
+}
+
+.accordion__content ul{
+	padding-left: 15px;
+}
+
+.accordion__input {
+	display: none;
+}
+
+.accordion__input:checked ~ .accordion__content{
+	display: block;
+}
+
+.accordion__input:checked ~ .accordion__label::after{
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='24px' viewBox='0 0 24 24' width='24px' fill='%23000000'%3E%3Cpath d='M0 0h24v24H0V0z' fill='none'/%3E%3Cpath d='M19 13H5v-2h14v2z'/%3E%3C/svg%3E");
+}
+
+/*──────────────────
       Contact
 ──────────────────*/
 
@@ -248,6 +423,112 @@ a.nav-link{
 	text-align:center;
 	font-size:1.2rem;
 	font-family: var(--main-font-family);
+}
+
+/*────────────────── 
+	Li-ion Page
+──────────────────*/
+
+.li-ion-page {
+	margin: auto;
+	height: 100vh;
+	color: var(--main-fonts-color);
+	font-family: var(--main-font-family);
+	align-items: center;
+	justify-content: space-evenly;
+	text-align:center;
+    color: var(--main-fonts-color);
+	z-index: 1;
+	padding: 20px;
+}
+
+.li-ion-page h2{
+	margin: 100px 0px 20px 0px;
+	padding-bottom: 15px;
+    letter-spacing: normal;
+	font-style: Normal;
+	font-size: 50px;
+	color: var(--main-fonts-color);
+	text-shadow: 0px 0px 40px var(--main-decor-color);
+	text-align: center;
+	padding: 0% 15%;
+}
+
+.li-ion-page p{
+	padding: 10px 20%;
+	font-size:1rem;
+	text-align: justify;
+}
+
+.li-ion-page figure {
+	margin: 10px 20%;
+}
+
+.li-ion-page figcaption{
+	font-size: 0.8rem;
+}
+
+.li-ion-page .resources {
+	text-align: left;
+	padding-top: 30px;
+	padding-bottom: 100px;
+}
+
+.li-ion-page .resources p {
+	text-align: left;
+	padding: 10px 20%;
+}
+
+.li-ion-page .resources ol{
+	padding: 10px 22%;
+}
+
+/*────────────────── 
+	Hydroponics Page
+──────────────────*/
+
+.hydroponics-page {
+	margin: auto;
+	height: 100vh;
+	color: var(--main-fonts-color);
+	font-family: var(--main-font-family);
+	align-items: center;
+	justify-content: space-evenly;
+	text-align:center;
+    color: var(--main-fonts-color);
+	z-index: 1;
+	padding: 20px;
+}
+
+.hydroponics-page h2{
+	margin: 100px 0px 20px 0px;
+	padding-bottom: 15px;
+    letter-spacing: normal;
+	font-style: Normal;
+	font-size: 50px;
+	color: var(--main-fonts-color);
+	text-shadow: 0px 0px 40px var(--main-decor-color);
+	text-align: center;
+	padding: 0% 15%;
+}
+
+.hydroponics-page p{
+	padding: 10px 20%;
+	font-size:1rem;
+	text-align: justify;
+}
+
+.hydroponics-page figure {
+	margin: 10px 20%;
+}
+
+.hydroponics-page img{
+	max-width: 600px;
+	border-radius: 10px;
+}
+
+.hydroponics-page figcaption{
+	font-size: 0.8rem;
 }
 
 /*────────────────── 
@@ -282,10 +563,10 @@ footer {
 
 hr {
     background: var(--main-decor-color);
-	margin: 2px;
-	height: 3px;
-	width: 150px;
-    border-radius:5px;
+	margin: 0px;
+	height: 0px;
+	width: 0px;
+    border-radius:0px;
 	border: hidden;
 	margin-inline-start: auto;
     margin-inline-end: auto;
@@ -408,4 +689,25 @@ hr {
 
 .nav-active{
 	transform:translatex(0%);
+}
+
+@media(max-width:768px) {
+	.about{
+		flex-direction: column;
+		align-items: center;
+	}
+	.personal-photo{ 
+		max-width:100%;
+		margin-bottom: 10px;
+	}
+	
+	.about_text{
+		padding: 0;
+		margin: 0;
+	}
+
+	.accordion{
+		max-width: 100%;
+	}
+	
 }

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width">
+      <title>Alexa Fernando</title>
+      <link href="style.css" rel="stylesheet" type="text/css" />
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      <script src="script.js"></script>
+	  <!-- Add Roboto Mono Font -->
+		<style>
+			@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap');
+		</style>
+		<!--Add Accordion Icons-->
+		<link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
+  </head>
+    <body>
+	  
+        <div class="container">
+	  
+		<!--────────────────Header───────────────-->
+	<header>
+		<a class="logo" href="#home">
+			<img class="logo-pic" src="images/ground.png">
+            <h1>Alexa Fernando</h1>
+		</a>
+		<nav>	
+		 <ul class="nav-bar"><div class="bg"></div>
+			<li><a class="nav-link active left" href="index.html #home">Home</a></li>
+			<li><a class="nav-link left" href="index.html #about-me">About Me</a></li>
+			<li><a class="nav-link left" href="index.html #projects">Projects</a></li>
+			<li><a class="nav-link right" href="index.html #experience">Experience</a></li>
+			<li><a class="nav-link right" href="index.html #contact">Contact</a></li>
+			<li><a class="nav-link right" href="index.html #about-me">Resume</a></li> <!--Add Resume PDF Link-->
+		 </ul>
+			
+			<div class="hamburger">
+				<div class="line1"></div>
+            <div class="line2"></div>
+				<div class="line3"></div>
+			</div>
+		</nav>
+	</header>
+	<main>
+
+		<section class="hydroponics-page">
+			<h2>Smart Hydroponics.</h2>
+			<figure>
+				<img class="hudroponic-photo" src="images/hydroponics.jpg" alt="Hydroponic System.">
+				<figcaption>Smart Hydroponic System.</figcaption>
+			</figure>
+			<p>Due to the threats imposed by the growing climate crisis, there is a critical need for innovative sustainability practices. A large contributor to the degradation of the planet is the agricultural industry. Traditional agricultural practices often lead to harmful runoff and take copious amounts of water and land to sustain. One solution to this problem is hydroponics. Hydroponics systems cultivate crops in a smaller area than traditional agriculture, use recycled water, and do not need any soil. One of the problems of hydroponics systems is that they are often tedious to maintain. Throughout this project, I created a Smart IoT Hydroponics System that streamlines the process of hydroponic crop cultivation.</p>
+			<figure>
+				<img class="hudroponic-photo" src="images/hydroponics_schematic.png" alt="Hydroponic System Schematic.">
+				<figcaption>Hydroponics System Schematic.</figcaption>
+			</figure>
+			<p>This Smart IoT Hydroponics System encompasses a fully automated ebb and flow hydroponics connected to environmental sensors that output parameter data to an interactive dashboard that can be accessed easily from a user’s phone or laptop. This dashboard allows the user to control the parameters of the hydroponics environment. The sensor design includes electrical conductivity, pH, dissolved oxygen, temperature, humidity, and flow meter sensors in addition to a water pump, nutrient feeders, and grow lights. The sensor data is collected by an Arduino Uno microcontroller, which connects to a single-board computer that hosts the Node-RED flow interface between serial Arduino outputs and the IoT dashboard.</p>
+			<p>STEM Pre-Academy implemented this system as the basis for a variety of middle-school electrical and computer engineering curriculum to teach technical STEM skills to the younger generation of students.</p>
+
+		</section>
+
+
+	</main>
+  </div>
+  </body>
+</html>
