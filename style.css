@@ -22,6 +22,7 @@ main{
 	background: var(--main-background);
 }
 
+
 /*────────────────── 
        header
 ──────────────────*/
@@ -39,6 +40,7 @@ header{
 	transition: 0.3s;
 	z-index: 5;
 }
+
 .nav-show{
 	opacity: 0;
 }
@@ -48,13 +50,12 @@ header:hover{
 	background: var(--main-header-background);
 }
 
-.logo {
+/* .logo {
 	display: flex;
 	align-items: left;
 	justify-content: left;
 }
-.logo img {
-	display: block;
+.logo-pic {
 	flex-basis: 5%;
 	width: 10%;
 	height: 10%;
@@ -69,17 +70,13 @@ header:hover{
 	color: #000;
 }
 
-.logo h1 a:visited, a:link, a:active, a:hover {
-	color: #ffffff;
-	text-decoration: none;
-}
+*/
 
-.nav-bar{
+
+.nav-bar {
 	list-style: none;
 	position: relative;
-	display: inline-flex;
 }
-
 
 a.nav-link{
 	margin: 2px;
@@ -100,6 +97,37 @@ a.nav-link{
     background: var(--main-decor-color);
 }
 
+.nav-left, .nav-right{
+	display: inline-flex;
+	align-items: center; 
+	justify-content: space-around;
+	flex: 2; 
+}
+
+.logo{
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	font-family: var(--main-font-family);
+	flex: 1;
+	cursor: pointer;
+	color: #000;
+}
+
+.logo-pic{
+	max-width: 6%;
+	padding: 0 10px;
+}
+
+.logo li{
+	text-align: center;
+}
+
+
+.logo a:visited, a:link, a:active, a:hover {
+	color: var(--main-decor-color);
+	text-decoration: none;
+}
 
 /*──────────────────
        home
@@ -428,10 +456,16 @@ a.nav-link{
 /*────────────────── 
 	Li-ion Page
 ──────────────────*/
+.liion-content{
+	padding: 0;
+	width: 100%;
+	height: 100%;
+	background: var(--main-background);
+}
 
 .li-ion-page {
 	margin: auto;
-	height: 100vh;
+	height: auto;
 	color: var(--main-fonts-color);
 	font-family: var(--main-font-family);
 	align-items: center;
@@ -471,7 +505,7 @@ a.nav-link{
 .li-ion-page .resources {
 	text-align: left;
 	padding-top: 30px;
-	padding-bottom: 100px;
+	/* padding-bottom: 100px; */
 }
 
 .li-ion-page .resources p {
@@ -489,7 +523,7 @@ a.nav-link{
 
 .hydroponics-page {
 	margin: auto;
-	height: 100vh;
+	height: auto;
 	color: var(--main-fonts-color);
 	font-family: var(--main-font-family);
 	align-items: center;
@@ -536,9 +570,22 @@ a.nav-link{
 ──────────────────*/
 
 footer {
+	min-height: 100%;
+	padding-top: 10px;
 	width: 100%;
-	height: 100%;
+	height: auto;
     background-color: var(--main-header-background);
+	display: flex;
+	justify-content: center;
+}
+
+footer a {
+	padding: 0 5px;
+	color: #000;
+}
+
+footer a:hover{
+	color: var(--main-decor-color);
 }
 
 .copyright {
