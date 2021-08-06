@@ -13,8 +13,8 @@ $(window).on('scroll', function(){
 //hamburger
 const navSlide = () => {
 	 const hamburger = document.querySelector(".hamburger");
-	 const navbar = document.querySelector(".nav-bar");
-	 const navLinks = document.querySelectorAll(".nav-bar li");
+	 const navbar = document.querySelector(".mobile-nav");
+	 const navLinks = document.querySelectorAll(".mobile-nav-link");
 
      hamburger.onclick = () => {
 		

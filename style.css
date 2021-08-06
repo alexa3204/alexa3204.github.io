@@ -73,7 +73,7 @@ header:hover{
 */
 
 
-.nav-bar {
+.nav-container {
 	list-style: none;
 	position: relative;
 }
@@ -104,6 +104,11 @@ a.nav-link{
 	flex: 2; 
 }
 
+.nav-left{
+	order: 1;
+}
+
+
 .logo{
 	display: inline-flex;
 	align-items: center;
@@ -112,6 +117,7 @@ a.nav-link{
 	flex: 1;
 	cursor: pointer;
 	color: #000;
+	order: 2;
 }
 
 .logo-pic{
@@ -129,6 +135,13 @@ a.nav-link{
 	text-decoration: none;
 }
 
+.nav-right{
+	order: 3;
+}
+
+.mobile-header{
+	display: none;
+}
 /*──────────────────
        home
 ──────────────────*/
@@ -496,6 +509,7 @@ a.nav-link{
 
 .li-ion-page figure {
 	margin: 10px 20%;
+	max-width: 100%;
 }
 
 .li-ion-page figcaption{
@@ -554,10 +568,11 @@ a.nav-link{
 
 .hydroponics-page figure {
 	margin: 10px 20%;
+	max-width: 100%;
 }
 
 .hydroponics-page img{
-	max-width: 600px;
+	max-width: 60%;
 	border-radius: 10px;
 }
 
@@ -690,27 +705,66 @@ hr {
 }
 
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 768px) {
 
-	#home, #projects, #contact{
+	#home, #projects, #contact, .liion-content, .resources, .hydroponics-content{
         overflow-x: hidden;
 	}
+
+	.li-ion-photo {
+		max-width: 100%;
+	}
+
+}
+
+@media only screen and (max-width:1300px) {
+
 	header{
 		background-color: var(--main-header-background);
+		margin: auto;
 	}
-	.logo{
-		position:absolute;
+	
+	a.mobile-nav-link{
+		margin: 2px;
+		padding: 5px 10px;
+		text-decoration: none;
+		color: var(--main-fonts-color);
+		font-family: var(--main-font-family);
+		cursor: pointer;
+		text-transform: uppercase;
+	}
+
+	.mobile-nav-link:hover {
+		color: #000000;
+		background: var(--main-decor-color);
+	}
+
+	.nav-container{
+		display: none;
+	}
+
+	.mobile-header{
+		position: relative;
+		display: inline;
+
+	}
+
+	.mobile-logo{
+		position: relative;
 		top: 2px;
-		left: 30px;
+		right: 50px;
+		font-family: var(--main-font-family);
+		flex: 1;
+		cursor: pointer;
+		color: #000;
+		align-items: center;
 	}
-	.nav-show{
-		opacity: 1;
-	}	 
-	.nav-bar{
+
+	.mobile-nav{
 		position:fixed;
 		top: 0px;
 		right:0;
-		width:60%;
+		width:50%;
 		height: 100vh;
 		display:flex;
 		flex-direction: column;
@@ -720,22 +774,23 @@ hr {
 		transform:translatex(100%);
 		transition: transform 0.5s ease-in;
 		z-index: -1;
+		padding-right: 0;
+		list-style: none;
 	}
+
 	.hamburger{
+		display: inline;
 		position:absolute;
-		top: 17px;
-		right: 25%;
+		top: 0px;
+		right: 0;
 		display: block;
 		cursor:pointer;
 		z-index: 5;
 	}	
-	.nav-bar li{
-		opacity:0;
-	}
-}
 
-.nav-active{
-	transform:translatex(0%);
+	.nav-active{
+		transform:translatex(0%);
+	}	
 }
 
 @media(max-width:768px) {
