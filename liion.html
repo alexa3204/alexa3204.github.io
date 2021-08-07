@@ -28,18 +28,18 @@
 		<nav class="nav-container">	
 			<div class="bg"></div>
 			<div class="nav-left">
-				<a class="nav-link active left" href="index.html #home">Home</a>
-				<a class="nav-link left" href="index.html #about-me">About Me</a>
-				<a class="nav-link left" href="index.html #projects">Projects</a>
+				<a class="nav-link active left" href="index.html#home">Home</a>
+				<a class="nav-link left" href="index.html#about-me">About Me</a>
+				<a class="nav-link left" href="index.html#projects">Projects</a>
 			</div>
-			<a class="logo" href="#home">
+			<a class="logo" href="index.html">
 				<img class="logo-pic left" src="images/ground.png">
 				<h1 >Alexa Fernando</h1>
 				<img class="logo-pic right" src="images/ground.png">
 			</a>
 			<div class="nav-right ">
-				<a class="nav-link right" href="index.html #experience">Experience</a>
-				<a class="nav-link right" href="index.html #contact">Contact</a>
+				<a class="nav-link right" href="index.html#experience">Experience</a>
+				<a class="nav-link right" href="index.html#contact">Contact</a>
 				<!--Add Resume PDF Link-->
 				<a class="nav-link right" href="files/alexa_fernando_web_resume_2021.pdf" target="_blank">Resume</a>
 			</div>
@@ -48,11 +48,11 @@
 		<div class="mobile-header">
 			<h1 class="mobile-logo">Alexa Fernando</h1>
 			<nav class="mobile-nav">
-				<a class="mobile-nav-link" href="index.html #home">Home</a>
-				<a class="mobile-nav-link" href="index.html #about-me">About Me</a>
-				<a class="mobile-nav-link" href="index.html #projects">Projects</a>
-				<a class="mobile-nav-link" href="index.html #experience">Experience</a>
-				<a class="mobile-nav-link" href="index.html #contact">Contact</a>
+				<a class="mobile-nav-link" href="index.html#home">Home</a>
+				<a class="mobile-nav-link" href="index.html#about-me">About Me</a>
+				<a class="mobile-nav-link" href="index.html#projects">Projects</a>
+				<a class="mobile-nav-link" href="index.html#experience">Experience</a>
+				<a class="mobile-nav-link" href="index.html#contact">Contact</a>
 				<!--Add Resume PDF Link-->
 				<a class="mobile-nav-link" href="files/alexa_fernando_web_resume_2021.pdf" target="_blank">Resume</a>
 			</nav>
@@ -69,25 +69,31 @@
 		<section class="li-ion-page">
 			<h2>Lithium-Ion Segmented Cell</h2>
 			<p>Lithium-ion batteries are arguably the most popular battery to date. The batteries are used in almost all portable electronic devices manufactured today and are dominating the rapidly growing electric vehicle market. There is also a potential for these batteries to play a large role in supplementing the growth of renewable energy and energy storage. As the climate crisis continues to worsen and public policy and technology are looking towards a solution, lithium-ion batteries are extremely important. These batteries work by allowing positively charged lithium ions to travel between the anode and the cathode through an electrolyte separator. Lithium-ion batteries are competitive against other batteries because they are fairly lightweight and are efficient in their number of charge cycles and their high energy and power density in comparison to other types of batteries.</p>
-			<p>However, there are also some disadvantages to the lithium-ion battery. The durability and life cycle of the batteries are not up to par with the growing demands for electric vehicles. Previous research has shown that lithium-ion batteries exhibit inhomogeneous degradation due to factors such as temperature variations within the battery [1]. This can lead to a reduction in battery efficiency, lifetime, and even safety [2]. In order to improve upon future battery technology, we must have a better understanding of how and why the battery cells degrade as they are operating.</p>
+			<p>There are, however, also some disadvantages to the lithium-ion battery. The durability and life cycle of the batteries are not up to par with the growing demands for electric vehicles. Previous research has shown that lithium-ion batteries exhibit inhomogeneous degradation due to factors such as temperature variations within the battery [1]. This can lead to a reduction in battery efficiency, lifetime, and even safety [2]. In order to improve upon future battery technology, we must have a better understanding of how and why the battery cells degrade as they are operating.</p>
 			<figure>
 				<img class="li-ion-photo" src="images/daisy_chain.png" alt="Daisy Chained Temperature Sensors">
 				<figcaption>Daisy Chained Temperature Sensors.</figcaption>
 			</figure>
-			<p>This project focuses on the design of a new type of segmented cell. The segmented coin cells will be instrumented with microelectronic sensor components that will read current, voltage, and temperature gradients inside of the battery simultaneously, which has not been addressed in previous studies. To test the cells, they are to be wired in parallel to simulate a lithium-ion battery during operation. The sensors are daisy-chained together in order to acquire all cell data on one recording bus and will be assembled on a printed circuit board within the coin cells along with metallic foam layers to reduce any undesired current effects. By using low-cost microcomponents attached to one bus, the project is easily scalable and the data can be recorded and analyzed efficiently. Pouch cells will be used to test the sensor design, as they are more efficient than the comparable cylindrical cell in space efficiency and flexibility and are safer in the event of an explosion [3].</p>
+			<p>The purpose of this project is to contribute to the research and improvement of lithium-ion battery degradation by designing and testing the concept of a new Li-ion segmented cell. This new Li-ion segmented cell is intended to be instrumented with microelectronic sensor components that can take measurements of the battery’s parameters in-operando and easily output the parameter data for further analysis and research. In the experimental phase of this project, we performed a proof of concept of the new segmented cell by designing a daisy chained temperature sensor circuit connected to a microcontroller and used this to measure the temperature gradient within a battery as it was charged and discharged. 
+			</p>
 			<figure>
 			<img class="li-ion-photo" src="images/segmented_cell.png" alt="Segmented Cell Design">
 			<figcaption>Segmented Cell Design.</figcaption>
 			</figure>
-			<p>For the prototype of the sensor design, equipment includes an Arduino Uno, one-wire temperature sensors, analog pressure sensors, a variety of spacers and metallic foams/springs, and programmable heating pads if needed to simulate temperature gradients. These sensors were well researched to ensure compatibility with the daisy-chain design implementation.</p>
-			<p>This project has the potential to gain a better understanding of the conditions inside of working lithium-ion batteries which may lead to improvements in future battery designs for a longer life cycle. This would play an important role in advancing electric vehicle technology and climate policy.</p>
+			<p>After configuring the segmented cell prototype, we then conducted battery testing with microelectronic temperature sensors pasted onto a 10A LFP pouch cell, which showed that there were no significant temperature gradients within the pouch cell when charged at a low current of 400mA, which was the maximum amount of current the testing machines would provide. Further research for this project would be to run battery tests at a higher current to experience greater temperature differences. We would also like to incorporate pressure and current sensors, and eventually design segmented coin cells using the daisy chained microelectronic sensor technology prototype</p>
+			<p>This project has the potential to gain a better understanding of the conditions inside of working lithium-ion batteries which may lead to improvements in future battery designs for a longer life cycle. This would play an important role in advancing electric vehicle technology, energy storage, and climate policy.</p>
+			<figure>
+				<img class="li-ion-photo color-chart" src="images/li_ion_cover_photo.jpg" alt="Li-ion Temperature Sensor Output">
+				<figcaption>Color temperature chart for average temperature over two charge cycles of the segmented li-ion cell prototype.</figcaption>
+			</figure>
 			<div class="resources">
-			<p>Resources</p>
-			<ol>
-				<li>Li, Lifu, and Junwei Hou. “Capacity Detection of Electric Vehicle Lithium-Ion Batteries Based on X-Ray Computed Tomography.” RSC Advances, The Royal Society of Chemistry, 16 July 2018, pubs.rsc.org/en/content/articlelanding/2018/RA/C8RA04516J. </li>
-				<li>Paul, Sebastian, et al. “Analysis of Ageing Inhomogeneities in Lithium-Ion Battery Systems.” Journal of Power Sources, Elsevier, 23 Jan. 2013, http://www.sciencedirect.com/science/article/pii/S037877531300116X.</li>
-				<li>Lam, Mike. “Advantages of Pouch Cell Battery, Trend and Opportunities.” Medium, Battery Lab, 29 Nov. 2019, medium.com/battery-lab/advantages-of-pouch-cell-battery-trend-and-opportunities-d08a5f0c6804. </li>
-			</ol>
+				<p>Resources</p>
+				<ol>
+					<li>Li, Lifu, and Junwei Hou. “Capacity Detection of Electric Vehicle Lithium-Ion Batteries Based on X-Ray Computed Tomography.” RSC Advances, The Royal Society of Chemistry, 16 July 2018, pubs.rsc.org/en/content/articlelanding/2018/RA/C8RA04516J.</li>
+					<li>Paul, Sebastian, et al. “Analysis of Ageing Inhomogeneities in Lithium-Ion Battery Systems.” Journal of Power Sources, Elsevier, 23 Jan. 2013, http://www.sciencedirect.com/science/article/pii/S037877531300116X.</li>
+					<li>Lam, Mike. “Advantages of Pouch Cell Battery, Trend and Opportunities.” Medium, Battery Lab, 29 Nov. 2019, medium.com/battery-lab/advantages-of-pouch-cell-battery-trend-and-opportunities-d08a5f0c6804.</li>
+				</ol>
+			</div>
 			</div>
 		</section>
 	</div>

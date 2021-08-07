@@ -102,6 +102,7 @@ a.nav-link{
 	align-items: center; 
 	justify-content: space-around;
 	flex: 2; 
+	color: var(--main-fonts-color);
 }
 
 .nav-left{
@@ -114,6 +115,7 @@ a.nav-link{
 	align-items: center;
 	justify-content: center;
 	font-family: var(--main-font-family);
+	color: var(--main-fonts-color);
 	flex: 1;
 	cursor: pointer;
 	color: #000;
@@ -510,6 +512,11 @@ a.nav-link{
 .li-ion-page figure {
 	margin: 10px 20%;
 	max-width: 100%;
+}
+
+.color-chart{
+	margin: 10px 20%;
+	max-width: 40%;
 }
 
 .li-ion-page figcaption{
