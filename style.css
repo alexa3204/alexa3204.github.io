@@ -120,6 +120,7 @@ a.nav-link{
 	cursor: pointer;
 	color: #000;
 	order: 2;
+	text-decoration: none;
 }
 
 .logo-pic{
@@ -132,7 +133,7 @@ a.nav-link{
 }
 
 
-.logo a:visited, a:link, a:active, a:hover {
+.logo:hover {
 	color: var(--main-decor-color);
 	text-decoration: none;
 }
